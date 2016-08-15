@@ -30,6 +30,7 @@ values."
      ;; markdown
      org
      (shell :variables
+            shell-default-shell 'shell
             shell-default-height 30
             shell-default-position 'bottom)
      ;; spell-checking
@@ -107,7 +108,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+                               :size 14
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
@@ -259,8 +260,6 @@ you should place your code here."
   (global-set-key (kbd "M-m") 'set-mark-command)
   (global-set-key (kbd "M-p") 'backward-paragraph)
   (global-set-key (kbd "M-n") 'forward-paragraph)
-  (global-set-key (kbd "C-t a") 'beginning-of-buffer)
-  (global-set-key (kbd "C-t e") 'end-of-buffer)
   (global-set-key (kbd "C-t k") 'kill-whole-line)
   (global-set-key (kbd "C-t q") 'goto-last-change)
   ;;multiple-cursors
