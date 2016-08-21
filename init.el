@@ -35,12 +35,13 @@ values."
      ;; spell-checking
      ;; syntax-checking
      version-control
+     tianyuan
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(multiple-cursors)
+   dotspacemacs-additional-packages '()
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -253,36 +254,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  ;;shortcut
-  (define-prefix-command 'ctl-t-map)
-  (global-set-key (kbd "C-t") 'ctl-t-map)
-  (global-set-key (kbd "M-m") 'set-mark-command)
-  (global-set-key (kbd "M-p") 'backward-paragraph)
-  (global-set-key (kbd "M-n") 'forward-paragraph)
-  (global-set-key (kbd "C-t a") 'beginning-of-buffer)
-  (global-set-key (kbd "C-t e") 'end-of-buffer)
-  (global-set-key (kbd "C-t k") 'kill-whole-line)
-  (global-set-key (kbd "C-t q") 'goto-last-change)
-  ;;multiple-cursors
-  (global-set-key (kbd "C-t C-n") 'mc/mark-next-like-this)
-  (global-set-key (kbd "C-t C-p") 'mc/mark-previous-like-this)
-  (global-set-key (kbd "C-t C-a") 'mc/mark-all-like-this)
-  (global-set-key (kbd "C-t C-l") 'mc/edit-lines)
-  
-  ;;编辑时覆盖选中区域
-  (delete-selection-mode 1)
-  ;; copy region or whole line
-  (global-set-key "\M-w"
-                  (lambda ()
-                    (interactive)
-                    (if mark-active
-                        (kill-ring-save (region-beginning)
-                                        (region-end))
-                      (progn
-                        (kill-ring-save (line-beginning-position)
-                                        (line-end-position))
-                        (message "copied line")))))
-
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
