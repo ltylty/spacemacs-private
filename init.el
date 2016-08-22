@@ -30,7 +30,6 @@ values."
      ;; markdown
      org
      (shell :variables
-            shell-default-shell 'shell
             shell-default-height 30
             shell-default-position 'bottom)
      ;; spell-checking
