@@ -1,13 +1,3 @@
-;;; config.el --- Chinese Layer configuration File for Spacemacs
-;;
-;; Copyright (c) 2012-2016 Sylvain Benner & Contributors
-;;
-;; Author: Sylvain Benner <sylvain.benner@gmail.com>
-;; URL: https://github.com/syl20bnr/spacemacs
-;;
-;; This file is not part of GNU Emacs.
-;;
-;;; License: GPLv3
 
 ;;编辑时覆盖选中区域
 (delete-selection-mode 1)
@@ -23,3 +13,6 @@
                       (kill-ring-save (line-beginning-position)
                                       (line-end-position))
                       (message "copied line")))))
+
+;;org导出markdown
+(setq org-export-backends (quote (ascii html icalendar latex md)))
