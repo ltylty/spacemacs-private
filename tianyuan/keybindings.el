@@ -1,7 +1,6 @@
 ;;shortcut
 (define-prefix-command 'ctl-t-map)
 (global-set-key (kbd "C-t") 'ctl-t-map)
-(global-set-key (kbd "M-m") 'set-mark-command)
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "M-n") 'forward-paragraph)
 (global-set-key (kbd "C-t C-k") 'kill-whole-line)

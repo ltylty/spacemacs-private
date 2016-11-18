@@ -16,3 +16,4 @@
 
 ;;org导出markdown
 (setq org-export-backends (quote (ascii html icalendar latex md)))
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
