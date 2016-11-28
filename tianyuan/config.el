@@ -1,4 +1,3 @@
-
 ;;编辑时覆盖选中区域
 (delete-selection-mode 1)
 
@@ -14,6 +13,6 @@
                                       (line-end-position))
                       (message "copied line")))))
 
-;;org导出markdown
-(setq org-export-backends (quote (ascii html icalendar latex md)))
-(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+;; 自动换行
+(add-hook 'org-mode-hook
+          (lambda () (setq truncate-lines nil)))
