@@ -13,6 +13,15 @@
                                       (line-end-position))
                       (message "copied line")))))
 
-;; 自动换行
+;; org自动换行
 (add-hook 'org-mode-hook
           (lambda () (setq truncate-lines nil)))
+
+;; org截图
+(defun org-paste-screenshot ()
+  (interactive)
+  (setq filename
+        (concat (format-time-string "%Y%m%d_%H%M%S") ".jpg"))
+  (call-process "c:\\Program Files (x86)\\IrfanView\\i_view32.exe" nil nil nil (concat "/clippaste /convert=" filename))
+  (insert (concat "[[file:" filename "]]"))
+  (org-display-inline-images))
