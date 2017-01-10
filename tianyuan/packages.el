@@ -1,5 +1,5 @@
 (defconst tianyuan-packages
-  '(multiple-cursors))
+  '(multiple-cursors vlf))
 
 (defun tianyuan/init-multiple-cursors()
   (use-package multiple-cursors
@@ -8,4 +8,9 @@
     )
   )
 
-
+(defun tianyuan/init-vlf()
+  (use-package vlf
+    :init
+    :config
+    )
+  )
