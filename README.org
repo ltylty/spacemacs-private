@@ -1,3 +1,4 @@
+spacemacs配置
 * 使用方法
 #+BEGIN_SRC 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
