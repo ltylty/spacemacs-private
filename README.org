@@ -1,5 +1,5 @@
 spacemacs配置,使用方法如下
 #+BEGIN_SRC 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-git clone git@github.com:ltylty/spacemacs-private.git ~/.spacemacs.d/
+git clone https://github.com/ltylty/spacemacs-private.git
 #+END_SRC
