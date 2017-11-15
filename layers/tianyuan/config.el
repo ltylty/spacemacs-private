@@ -1,7 +1,5 @@
 ;; 编辑时覆盖选中区域
 (delete-selection-mode 1)
-;; org自动缩进
-(setq org-startup-indented t)
 
 ;; copy region or whole line
 (global-set-key "\M-w"
@@ -14,6 +12,9 @@
                       (kill-ring-save (line-beginning-position)
                                       (line-end-position))
                       (message "copied line")))))
+
+;; org自动缩进
+(setq org-startup-indented t)
 
 ;; org自动换行
 (add-hook 'org-mode-hook
