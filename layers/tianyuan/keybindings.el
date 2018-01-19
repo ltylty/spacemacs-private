@@ -7,4 +7,4 @@
 (global-set-key (kbd "M-p") 'backward-paragraph)
 (global-set-key (kbd "M-n") 'forward-paragraph)
 
-;; (global-set-key (kbd "M-SPC") 'set-mark-command)
+(global-set-key (kbd "S-SPC") 'set-mark-command)
