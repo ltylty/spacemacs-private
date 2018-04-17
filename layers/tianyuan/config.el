@@ -28,3 +28,6 @@
   (call-process "e:\\APP\\IrfanView\\i_view64.exe" nil nil nil (concat "/clippaste /convert=" filename))
   (insert (concat "[[file:" filename "]]"))
   (org-display-inline-images))
+
+(add-to-list 'exec-path "C:/Program Files/Git/bin")  
+(add-to-list 'exec-path "C:/Program Files/Git/usr/bin")  
