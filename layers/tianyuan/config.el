@@ -25,7 +25,7 @@
   (interactive)
   (setq filename
         (concat (format-time-string "%Y%m%d_%H%M%S") ".jpg"))
-  (call-process "e:\\APP\\IrfanView\\i_view64.exe" nil nil nil (concat "/clippaste /convert=" filename))
+  (call-process "i_view64.exe" nil nil nil (concat "/clippaste /convert=" filename))
   (insert (concat "[[file:" filename "]]"))
   (org-display-inline-images))
 
